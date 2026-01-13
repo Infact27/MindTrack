@@ -27,7 +27,7 @@ emotion_model, stress_model, phq9_model, mlb, thresholds = load_assets()
 # Load emotion labels
 @st.cache_resource   # Cache the loaded labels 
 def load_emotion_labels():
-    with open("emotions.txt", "r") as f:
+    with open("app/emotions.txt", "r") as f:
         return [line.strip() for line in f.readlines()]
 
 emotion_labels_list = load_emotion_labels()
