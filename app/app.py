@@ -168,6 +168,36 @@ if st.button("Predict"):
                 f"**Severity:** <span style='color:{color}'>{phq9_severity}</span>",
                 unsafe_allow_html=True
             )
+            st.caption(
+                    "PHQ-9 is a standardized questionnaire used to screen depressive symptoms."
+                )
+
+        with st.expander("What is the PHQ-9 score?"):
+            st.markdown(
+                """
+                **PHQ-9 (Patient Health Questionnaire-9)** is a clinically validated
+                screening tool used to assess the presence and severity of depressive
+                symptoms.
+
+                **How it works**
+                - Consists of 9 questions related to mood, energy, sleep, appetite,
+                concentration, and interest in daily activities
+                - Each item is scored from 0 to 3
+                - Total score ranges from **0 to 27**
+                - Higher scores indicate more severe depressive symptoms
+
+                **How PHQ-9 is different from stress**
+                - **Stress** reflects short-term psychological pressure or tension
+                - **PHQ-9** reflects depressive symptoms experienced over a longer
+                period and their impact on daily functioning
+                - A person may experience stress without depression, or depression
+                without feeling acute stress
+
+                **Important note**
+                This tool is intended for screening purposes only and does not replace
+                professional diagnosis.
+                """
+            )
 
         st.subheader("Suggested Action (Based on PHQ-9 Guideline)")
 
