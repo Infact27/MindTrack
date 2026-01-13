@@ -12,12 +12,12 @@ nltk.download('wordnet')
 # Load models and thresholds
 @st.cache_resource      # Cache the loaded models to avoid reloading on every interaction
 def load_assets():
-    emotion_model = joblib.load("emotion_model.joblib")
-    stress_model = joblib.load("stress_model.joblib")
-    phq9_model = joblib.load("phq9_model.joblib")
-    mlb = joblib.load("emotion_mlb.joblib")
+    emotion_model = joblib.load("app/emotion_model.joblib")
+    stress_model = joblib.load("app/stress_model.joblib")
+    phq9_model = joblib.load("app/phq9_model.joblib")
+    mlb = joblib.load("app/emotion_mlb.joblib")
 
-    with open("emotion_thresholds.json", "r") as f:
+    with open("app/emotion_thresholds.json", "r") as f:
         thresholds = np.array(json.load(f))
 
     return emotion_model, stress_model, phq9_model, mlb, thresholds
